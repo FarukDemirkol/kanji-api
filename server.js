@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(cors());
 
 const pool = new Pool({
-    connectionString: process.env.DATABASE_URL, // Supabase bağlantı URL'in
+    connectionString: process.env.DATABASE_URL,
     ssl: { rejectUnauthorized: false },
 });
 
