@@ -7,14 +7,11 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-DATABASE_URL = 'postgresql://postgres:tcHSdYxVulApbMKpvdpUplxQBhghEeAK@postgres.railway.internal:5432/railway'
-
 const pool = new Pool({
     connectionString: process.env.DATABASE_URL, // Supabase bağlantı URL'in
     ssl: { rejectUnauthorized: false },
 });
 
-console.log("Server running on port 5000")
 
 // Kanji listesi çekme
 app.get("/kanji", async (req, res) => {
