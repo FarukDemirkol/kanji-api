@@ -6,6 +6,7 @@ const cors = require("cors");
 const app = express();
 app.use(express.json());
 app.use(cors());
+DATABASE_URL = "postgresql://postgres:tcHSdYxVulApbMKpvdpUplxQBhghEeAK@postgres.railway.internal:5432/railway"
 
 const pool = new Pool({
     connectionString: process.env.DATABASE_URL, // Supabase bağlantı URL'in
